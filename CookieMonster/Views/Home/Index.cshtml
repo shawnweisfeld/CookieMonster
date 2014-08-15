@@ -1,0 +1,13 @@
+﻿@model System.Collections.Specialized.NameValueCollection
+@{
+    ViewBag.Title = "Home Page";
+}
+
+
+<ol>
+    @foreach (var item in Request.Cookies.AllKeys)
+    {
+        <li><b>@item</b> @Request.Cookies[item].Value</li>
+    }
+</ol>
+

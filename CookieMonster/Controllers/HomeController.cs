@@ -22,7 +22,7 @@ namespace CookieMonster.Controllers
 
             for (int i = 0; i < 10; i++)
             {
-                Response.Cookies.Add(new HttpCookie(string.Format("mycookie-{1}-{0:yyyyMMdd-hhmmdd-ffff}", DateTime.Now, i), str.GenerateString(1024)));
+                Response.Cookies.Add(new HttpCookie(string.Format("mycookie-{1}-{0:yyyyMMdd-hhmmdd-ffff}", DateTime.Now, i), str.GenerateString(10)));
             }
 
             return RedirectToAction("Index");
